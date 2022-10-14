@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/img/music-app.png" />
+    <link rel="stylesheet" href="./assets/css/sound-way.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="playing">
+        <span>Now playing: </span>
+        <div class="marquee">
+          <h1 id="song-name">Name Song</h1>
+        </div>
+        <div class="cd">
+          <div class="song-img"></div>
+        </div>
+        <div class="btn-list">
+          <div class="btn shuf">
+            <i class="bx bx-shuffle"></i>
+          </div>
+          <div class="btn prev">
+            <i class="bx bx-skip-previous"></i>
+          </div>
+          <div class="play">
+            <i class="bx bx-play"></i>
+            <i class="bx bx-pause"></i>
+          </div>
+          <div class="btn next">
+            <i class="bx bx-skip-next"></i>
+          </div>
+
+          <div class="btn repeat">
+            <i class="bx bx-repeat"></i>
+          </div>
+        </div>
+        <div class="song-length">
+          <input
+            class="progress"
+            type="range"
+            value="0"
+            step="1"
+            min="0"
+            max="100"
+          />
+          <div class="time">
+            <span id="currentTime">00:00</span>
+            <span id="timeLeft">00:00</span>
+          </div>
+
+          <audio id="audio" src=""></audio>
+        </div>
+      </div>
+
+      <div class="list-song"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

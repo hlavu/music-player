@@ -1,0 +1,84 @@
+/* src:  https://codepen.io/yomateo/pen/ypbNrJ */
+@keyframes quiet {
+  25% {
+    transform: scaleY(0.6);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes normal {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.6);
+  }
+}
+@keyframes loud {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(1.2);
+  }
+}
+
+.boxContainer {
+  justify-content: space-between;
+  height: 50px;
+  --boxSize: 5.5px;
+  --gutter: 0.5px;
+  z-index: 0;
+}
+
+.box {
+  transform: scaleY(0.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: #42275a;
+  background: -webkit-linear-gradient(to right, #734b6d, #42275a);
+  background: linear-gradient(to right, #734b6d, #42275a);
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.box1 {
+  animation-name: quiet;
+}
+
+.box2 {
+  animation-name: normal;
+}
+
+.box3 {
+  animation-name: quiet;
+}
+
+.box4 {
+  animation-name: loud;
+}
+
+.box5 {
+  animation-name: normal;
+}
+
+.box6 {
+  animation-name: quiet;
+}
