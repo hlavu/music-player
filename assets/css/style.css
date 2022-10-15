@@ -47,7 +47,7 @@ body {
   top: 0;
   width: 100%;
   max-width: 480px;
-  border-radius: 3px;
+  border-radius: 3px 3px 0 0;
   background: var(--secondaryColor);
   z-index: 10;
 }
@@ -202,7 +202,7 @@ body {
 
 .list-song {
   margin-top: 433px;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   padding: 15px 12px 10px;
   overflow-y: visible;
   background: var(--primaryColor);
@@ -234,6 +234,7 @@ html {
   background: #d3cce3;
   background: -webkit-linear-gradient(to right, #e9e4f0, #d3cce3);
   background: linear-gradient(to right, #e9e4f0, #d3cce3);
+  overflow: hidden;
 }
 
 .song-info .boxContainer,
@@ -264,8 +265,9 @@ html {
 }
 
 .info-img {
-  width: 65px;
-  height: 65px;
+  width: 100%;
+  height: auto;
+  max-width: 65px;
   margin: 0 8px;
   border-radius: 50%;
   background-size: cover;
@@ -273,9 +275,9 @@ html {
 }
 
 .info-text {
-  flex: 1;
-  width: 247px;
+  min-width: 230px;
   align-self: center;
+  flex: 1;
 }
 
 .info-text h2 {
@@ -308,4 +310,19 @@ html {
 
 .dot i {
   font-size: 30px;
+}
+
+@media screen and (max-width: 510px) {
+  .song-info {
+    gap: 10px;
+    padding: 10px 8px;
+  }
+
+  .info-img {
+    min-width: 65px;
+  }
+
+  .boxContainer {
+    min-width: 65px;
+  }
 }
