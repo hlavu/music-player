@@ -63,7 +63,7 @@ body {
 }
 
 #song-name {
-  max-width: 420px;
+  max-width: 450px;
   display: inline-block;
   align-items: center;
   height: 40px;
@@ -73,7 +73,6 @@ body {
 
 .long-text {
   animation: marquee 10s linear infinite;
-  padding-right: 50px;
 }
 
 @keyframes marquee {

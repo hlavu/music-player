@@ -118,7 +118,9 @@ const app = {
     $(".song-img").style.backgroundImage = `url("${
       this.songs[this.currentIdx].image
     }")`;
-    $("#song-name").innerHTML = this.songs[this.currentIdx].name;
+    $("#song-name").innerHTML = `${this.songs[this.currentIdx].name} - ${
+      this.songs[this.currentIdx].singer
+    }`;
   },
   resetControl: function () {
     audio.currentTime = 0;
@@ -225,7 +227,12 @@ const app = {
 
   runningLongName: function () {
     let hasLongName = false;
-    if (this.songs[this.currentIdx].name.length > 27) {
+    let totalLength =
+      this.songs[this.currentIdx].name.length +
+      this.songs[this.currentIdx].singer.length;
+    console.log(totalLength);
+    if (totalLength > 25) {
+      console.log(this.songs[this.currentIdx].name, totalLength);
       hasLongName = true;
     }
     if (hasLongName) {
